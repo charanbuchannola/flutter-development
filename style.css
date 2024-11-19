@@ -1,0 +1,659 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Google Sans", sans-serif, "Roboto", sans-serif, "Roboto Mono", monospace;
+}
+
+html {
+  font-size: clamp(12px, 1vw, 24px);
+}
+
+main {
+  width: 100%;
+}
+main .navbar {
+  height: 10vh;
+  display: flex;
+  gap: 25%;
+  align-items: center;
+  justify-content: center;
+}
+main .navbar .left {
+  flex-basis: 10%;
+}
+main .navbar .left img {
+  width: 8em;
+}
+main .navbar .right {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.5em;
+}
+main .navbar .right h1 {
+  color: #4a4a4a;
+}
+main .navbar .right i {
+  font-size: 2em;
+  cursor: pointer;
+}
+main .navbar .right a {
+  background-color: #3367d1;
+  color: #ffffff;
+  border: 1px solid orangered;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 40px;
+  font-family: "Google Sans", "sans-serif";
+  padding: 10px 40px;
+  font-size: 1.3em;
+  text-decoration: none;
+}
+main .view1 {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 10vh 5vw;
+  background-image: linear-gradient(45deg, #f3fcff, #eafdfc);
+}
+main .view1 .top {
+  display: flex;
+  justify-content: space-between;
+}
+main .view1 .top > * {
+  flex-basis: 50%;
+}
+main .view1 .top img {
+  width: 27em;
+  -o-object-fit: contain;
+     object-fit: contain;
+  aspect-ratio: 5/4;
+}
+main .view1 .top .text {
+  padding: 12%;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+main .view1 .down {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .view1 p {
+  width: 70%;
+  font-size: 2rem;
+  text-align: center;
+}
+main .view2 {
+  display: flex;
+  gap: 3em;
+  padding: 10vh 10vw;
+}
+main .view2 .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2em;
+  padding-top: 2em;
+  padding-right: 2em;
+  border-top: 4px solid #e8eaed;
+}
+main .view2 .left img {
+  width: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  aspect-ratio: 5/4;
+}
+main .view2 .left .text {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+main .view2 .left p {
+  width: 80%;
+  font-size: 1.3em;
+  color: #4a4a4a;
+}
+main .view2 .middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top: 4px solid #e8eaed;
+  padding-top: 2em;
+  padding-right: 2em;
+}
+main .view2 .middle img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  aspect-ratio: 5/4;
+}
+main .view2 .middle .text {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+main .view2 .middle p {
+  width: 80%;
+  font-size: 1.3em;
+  color: #4a4a4a;
+}
+main .view2 .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2em;
+  padding-top: 2em;
+  padding-right: 2em;
+  border-top: 4px solid #e8eaed;
+}
+main .view2 .right img {
+  width: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  aspect-ratio: 5/4;
+}
+main .view2 .right .text {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+main .view2 .right p {
+  width: 80%;
+  font-size: 1.3em;
+  color: #4a4a4a;
+}
+main .view3 {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  padding: 10vh 14vw;
+  color: #ffffff;
+  background: linear-gradient(to bottom, #196bd4 20%, transparent 60%), radial-gradient(ellipse at -50% -150%, transparent 80%, #196bd4 80%), linear-gradient(145deg, #196bd4 0, #1783e1 60%);
+}
+main .view3 .text1 h1 {
+  font-size: 2em;
+}
+main .view3 .text2 {
+  font-size: 4em;
+  font-family: "Google Sans", sans-serif;
+  font-weight: 700;
+}
+main .view3 .card_up,
+main .view3 .card_down {
+  display: flex;
+  gap: 5em;
+  justify-content: space-between;
+}
+main .view3 .card_up > *,
+main .view3 .card_down > * {
+  flex-basis: 50%;
+}
+main .view3 .card_up .card_left,
+main .view3 .card_down .card_left {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 3em;
+}
+main .view3 .card_up .card_left p,
+main .view3 .card_down .card_left p {
+  font-size: 1.3em;
+}
+main .view3 .card_up .card_left:hover,
+main .view3 .card_down .card_left:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #3b85dd;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+main .view3 .card_up .card_right:hover,
+main .view3 .card_down .card_right:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #3b85dd;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+main .view3 .card_up .card_right,
+main .view3 .card_down .card_right {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 3em;
+}
+main .view3 .card_up .card_right p,
+main .view3 .card_down .card_right p {
+  font-size: 1.3em;
+}
+main .view4 {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  padding: 10vh 14vw;
+}
+main .view4 .top {
+  padding-left: 5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .view4 .top h1 {
+  font-size: 1.3em;
+  color: #4a4a4a;
+}
+main .view4 .top p {
+  font-size: 4em;
+  font-family: "Google Sans", sans-serif;
+  font-weight: 700;
+  width: 60vw;
+}
+main .view4 .bottom {
+  display: flex;
+  gap: 5em;
+  justify-content: space-between;
+}
+main .view4 .bottom > * {
+  flex-basis: 50%;
+}
+main .view4 .bottom img {
+  width: 95%;
+  padding-top: 10vh;
+  padding-bottom: 6vh;
+}
+main .view4 .bottom .right {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+}
+main .view4 .bottom .right .right_top {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+main .view4 .bottom .right .right_top h1 {
+  font-weight: bold;
+  font-size: 1.7em;
+  width: 88%;
+}
+main .view4 .bottom .right .right_top p {
+  font-size: 1.3em;
+  color: #4a4a4a;
+  width: 88%;
+}
+main .view4 .bottom .right .right_top a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+main .view4 .bottom .right .right_down {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+main .view4 .bottom .right .right_down h1 {
+  font-weight: bold;
+  font-size: 1.7em;
+  width: 88%;
+}
+main .view4 .bottom .right .right_down p {
+  font-size: 1.3em;
+  color: #4a4a4a;
+  width: 90%;
+}
+main .view4 .bottom .right .right_down a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+main .view5 {
+  display: flex;
+  gap: 3em;
+  padding: 10vh 14vw;
+}
+main .view5 > * {
+  flex-basis: 50%;
+}
+main .view5 .left {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  padding-left: 3vw;
+}
+main .view5 .left h2 {
+  font-size: 1.5em;
+  color: #4a4a4a;
+}
+main .view5 .left h1 {
+  font-weight: bold;
+  font-size: 3.3em;
+  width: 95%;
+}
+main .view5 .left p {
+  font-size: 1.2em;
+  color: #4a4a4a;
+  width: 80%;
+}
+main .view5 .left a {
+  background-color: #ffffff;
+  color: #3367d1;
+  border: 1px solid rgb(220, 27, 159);
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 40px;
+  font-family: "Google Sans", "sans-serif";
+  padding: 10px 30px;
+  font-size: 1em;
+  text-decoration: none;
+}
+main .view5 .left a:hover {
+  background-color: #3367d1;
+  color: #ffffff;
+}
+main .view5 .right img {
+  width: 90%;
+}
+main .view6 {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 3em;
+  padding: 10vh 14vw;
+}
+main .view6 > * {
+  flex-basis: 50%;
+}
+main .view6 .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5em;
+  padding-left: 3vw;
+}
+main .view6 .left h2 {
+  font-size: 1.5em;
+  color: #4a4a4a;
+}
+main .view6 .left h1 {
+  font-weight: bold;
+  font-size: 3.6em;
+  width: 95%;
+}
+main .view6 .left p {
+  font-size: 1.2em;
+  color: #4a4a4a;
+  width: 90%;
+}
+main .view6 .left .tag {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+}
+main .view6 .left .tag a {
+  background-color: #ffffff;
+  color: #3367d1;
+  border: 1px solid #3367d1;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 40px;
+  font-family: "Google Sans", "sans-serif";
+  padding: 10px 30px;
+  font-size: 1em;
+  text-decoration: none;
+}
+main .view6 .left .tag a:hover {
+  background-color: #3367d1;
+  color: #ffffff;
+}
+main .view6 .left .tag h3 {
+  font-size: 0.9em;
+}
+main .view6 .right img {
+  width: 90%;
+}
+main .view7,
+main .view10 {
+  display: flex;
+  gap: 3em;
+  padding: 10vh 14vw;
+}
+main .view7 > *,
+main .view10 > * {
+  flex-basis: 50%;
+}
+main .view7 .left,
+main .view10 .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5em;
+  padding-left: 3vw;
+}
+main .view7 .left h2,
+main .view10 .left h2 {
+  font-size: 1.5em;
+  color: #4a4a4a;
+}
+main .view7 .left h1,
+main .view10 .left h1 {
+  font-weight: bold;
+  font-size: 3.3em;
+  width: 95%;
+}
+main .view7 .left p,
+main .view10 .left p {
+  font-size: 1.2em;
+  color: #4a4a4a;
+  width: 80%;
+}
+main .view7 .left a,
+main .view10 .left a {
+  background-color: #ffffff;
+  color: #3367d1;
+  border: 1px solid #3367d1;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 40px;
+  font-family: "Google Sans", "sans-serif";
+  padding: 10px 30px;
+  font-size: 1em;
+  text-decoration: none;
+}
+main .view7 .left a:hover,
+main .view10 .left a:hover {
+  background-color: #3367d1;
+  color: #ffffff;
+}
+main .view7 .right img,
+main .view10 .right img {
+  width: 90%;
+}
+main .view11 {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 3em;
+  padding: 10vh 14vw;
+}
+main .view11 > * {
+  flex-basis: 50%;
+}
+main .view11 .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5em;
+  padding-left: 3vw;
+}
+main .view11 .left h2 {
+  font-size: 1.5em;
+  color: #4a4a4a;
+}
+main .view11 .left h1 {
+  font-weight: bold;
+  font-size: 3.3em;
+  width: 95%;
+}
+main .view11 .left p {
+  font-size: 1.2em;
+  color: #4a4a4a;
+  width: 80%;
+}
+main .view11 .left a {
+  background-color: #ffffff;
+  color: #3367d1;
+  border: 1px solid #3367d1;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 40px;
+  font-family: "Google Sans", "sans-serif";
+  padding: 10px 30px;
+  font-size: 1em;
+  text-decoration: none;
+}
+main .view11 .left a:hover {
+  background-color: #3367d1;
+  color: #ffffff;
+}
+main .view11 .right img {
+  width: 90%;
+}
+
+@media (max-width: 600px) {
+  main .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  main .navbar .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  main .linear {
+    width: 100%;
+    background-image: linear-gradient(45deg, #f3fcff, #eafdfc);
+  }
+  main .linear .view1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
+  }
+  main .linear .view1 .top {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 6em;
+  }
+  main .linear .view1 .top .text {
+    font-size: 1em;
+  }
+  main .linear .view1 .top .text h1 {
+    padding-left: 0.6em;
+    font-size: 3.4em;
+  }
+  main .linear .view1 .top img {
+    padding: 10%, 10%;
+  }
+  main .linear .view1 .down {
+    padding: 2em, 2em;
+  }
+  main .linear .view1 .down p {
+    font-size: 2em;
+  }
+  main .linear .view2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
+  }
+  main .linear .view3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
+  }
+  main .linear .view3 .card_up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
+  }
+  main .linear .view3 .card_down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
+  }
+}
+@media (min-width: 1760px) {
+  main .linear1 {
+    width: 100%;
+    background-image: linear-gradient(45deg, #f3fcff, #eafdfc);
+  }
+  main .linear1 .view1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+  }
+  main .linear1 .view1 .top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+  }
+  main .linear1 .view1 .top .text {
+    font-size: 1em;
+  }
+  main .linear1 .view1 .top .text h1 {
+    padding-left: 0.1em;
+    font-size: 3.4em;
+  }
+  main .linear1 .view1 .top img {
+    padding: 10%, 10%;
+  }
+  main .linear1 .view1 .down {
+    padding: 2em, 2em;
+  }
+  main .linear1 .view1 .down p {
+    font-size: 1.8em;
+    width: 23%;
+  }
+  main .linear2 {
+    width: 100%;
+  }
+  main .linear2 .view2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+  }
+}/*# sourceMappingURL=style.css.map */
